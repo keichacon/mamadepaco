@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  artesano_id: 
+  artesano: MyString
+  nombre: MyString
+  desc: MyText
+  precio: 
+  area: MyString
+  tipo: MyString
+  material: MyString
+  color: MyString
+  foto1: MyString
+  foto2: MyString
+  foto3: MyString
+
+two:
+  artesano_id: 
+  artesano: MyString
+  nombre: MyString
+  desc: MyText
+  precio: 
+  area: MyString
+  tipo: MyString
+  material: MyString
+  color: MyString
+  foto1: MyString
+  foto2: MyString
+  foto3: MyString

@@ -1,0 +1,71 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @artesano.tipo %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @artesano.nombre %>
+</p>
+
+<p>
+  <strong>Exp:</strong>
+  <%= @artesano.exp %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @artesano.region %>
+</p>
+
+<p>
+  <strong>T taller:</strong>
+  <%= @artesano.t_taller %>
+</p>
+
+<p>
+  <strong>T artesania:</strong>
+  <%= @artesano.t_artesania %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @artesano.desc %>
+</p>
+
+<p>
+  <strong>Logo:</strong>
+  <%= @artesano.logo %>
+</p>
+
+<p>
+  <strong>Foto:</strong>
+  <%= @artesano.foto %>
+</p>
+
+<p>
+  <strong>Banner1:</strong>
+  <%= @artesano.banner1 %>
+</p>
+
+<p>
+  <strong>Banner2:</strong>
+  <%= @artesano.banner2 %>
+</p>
+
+<p>
+  <strong>Banner3:</strong>
+  <%= @artesano.banner3 %>
+</p>
+
+<p>
+  <strong>Banner4:</strong>
+  <%= @artesano.banner4 %>
+</p>
+
+<%= link_to 'Agregar producto', new_producto_path(:artesano_id => @artesano.id) %>
+
+<%= link_to 'Edit', edit_artesano_path(@artesano) %> |
+<%= link_to 'Back', artesanos_path %>

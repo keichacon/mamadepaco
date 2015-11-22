@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Artesanos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tipo</th>
+      <th>Nombre</th>
+      <th>Exp</th>
+      <th>Region</th>
+      <th>T taller</th>
+      <th>T artesania</th>
+      <th>Desc</th>
+      <th>Logo</th>
+      <th>Foto</th>
+      <th>Banner1</th>
+      <th>Banner2</th>
+      <th>Banner3</th>
+      <th>Banner4</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @artesanos.each do |artesano| %>
+      <tr>
+        <td><%= artesano.tipo %></td>
+        <td><%= artesano.nombre %></td>
+        <td><%= artesano.exp %></td>
+        <td><%= artesano.region %></td>
+        <td><%= artesano.t_taller %></td>
+        <td><%= artesano.t_artesania %></td>
+        <td><%= artesano.desc %></td>
+        <td><%= artesano.logo %></td>
+        <td><%= artesano.foto %></td>
+        <td><%= artesano.banner1 %></td>
+        <td><%= artesano.banner2 %></td>
+        <td><%= artesano.banner3 %></td>
+        <td><%= artesano.banner4 %></td>
+        <td><%= link_to 'Show', artesano %></td>
+        <td><%= link_to 'Edit', edit_artesano_path(artesano) %></td>
+        <td><%= link_to 'Destroy', artesano, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Artesano', new_artesano_path %>

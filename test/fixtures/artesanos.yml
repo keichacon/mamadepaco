@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tipo: MyString
+  nombre: MyString
+  exp: MyText
+  region: MyString
+  t_taller: MyString
+  t_artesania: MyString
+  desc: MyText
+  logo: MyString
+  foto: MyString
+  banner1: MyString
+  banner2: MyString
+  banner3: MyString
+  banner4: MyString
+
+two:
+  tipo: MyString
+  nombre: MyString
+  exp: MyText
+  region: MyString
+  t_taller: MyString
+  t_artesania: MyString
+  desc: MyText
+  logo: MyString
+  foto: MyString
+  banner1: MyString
+  banner2: MyString
+  banner3: MyString
+  banner4: MyString

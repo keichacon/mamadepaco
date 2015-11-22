@@ -1,0 +1,91 @@
+<%= form_for(@producto) do |f| %>
+  <% if @producto.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@producto.errors.count, "error") %> prohibited this producto from being saved:</h2>
+
+      <ul>
+      <% @producto.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :artesano_id %><br>
+    <%= f.text_field :artesano_id, :class =>"form-control", :value => params[:artesano_id] %>
+  </div><br><br>
+  <div class="field">
+    <%= f.label "Nombre de Pieza" %><br>
+    <%= f.text_field :nombre, :class =>"form-control" %>
+  </div><br><br>
+  <div class="field">
+    <%= f.label "Descripción general" %><br>
+    <%= f.text_area :desc, :class =>"form-control" %>
+  </div><br><br>
+  <div class="field">
+    <%= f.label :precio %><br>
+    <%= f.text_field :precio, :class =>"form-control" %>
+  </div><br><br>
+  <div class="field">
+    <%= f.label "Área de tienda" %><br>
+    <%= f.select :area, options_for_select([["Selecciona Uno", ""], 
+"Accesorios",
+"Al aire libre",
+"Áreas de descanso",
+"Baño y Spa",
+"Cocina",
+"Estudio",
+"Interior",
+"Moda"
+
+
+    ]), :class =>"form-control" %>
+  </div><br><br>
+  <div class="field">
+    <%= f.label "Tipo de Artesanía" %><br>
+    <%= f.select :tipo, options_for_select([["Selecciona Uno", ""], 
+
+"Alfarería y cerámica",
+"Cartonería y papel",
+"Cerería",
+"Concha y caracol",
+"Fibras vegetales",
+"Hueso y cuerno",
+"Joyería y orfebrería",
+"Lapidaría y cantería",
+"Madera",
+"Maque y laca",
+"Metalistería",
+"Plumería",
+"Talabartería y peletería",
+"Textil",
+"Vidrio"
+
+
+    ]), :class =>"form-control" %>
+  </div><br><br>
+  <div class="field">
+    <%= f.label :material %><br>
+    <%= f.text_field :material, :class =>"form-control" %>
+  </div><br><br>
+  <div class="field">
+    <%= f.label :color %><br>
+    <%= f.text_field :color, :class =>"form-control" %>
+  </div><br><br>
+  <div class="field">
+    <%= f.label "Fotografía Principal" %><br>
+    <%= f.file_field :foto1 %>
+  </div><br><br>
+  <div class="field">
+    <%= f.label "Fotografía 2" %><br>
+    <%= f.file_field :foto2 %>
+  </div><br><br>
+  <div class="field">
+    <%= f.label "Fotografía 3" %><br>
+    <%= f.file_field :foto3 %>
+  </div><br><br>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

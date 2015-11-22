@@ -1,0 +1,88 @@
+<%= form_for(@artesano) do |f| %>
+  <% if @artesano.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@artesano.errors.count, "error") %> prohibited this artesano from being saved:</h2>
+
+      <ul>
+      <% @artesano.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label "Tipo de perfil" %><br>
+    <%= f.select :tipo, options_for_select([["Selecciona Uno", ""], "Taller","Artesano"]), :class =>"form-control" %>
+  </div><br><br>
+  <div class="field">
+    <%= f.label "Nombre de taller o artesano" %><br>
+    <%= f.text_field :nombre, :class =>"form-control" %>
+  </div><br><br>
+  <div class="field">
+    <%= f.label "Experiencia" %><br>
+    <%= f.text_area :exp, :class =>"form-control" %>
+  </div><br><br>
+  <div class="field">
+    <%= f.label "Región" %><br>
+    <%= f.select :region, options_for_select([["Selecciona Uno", ""], "Cañada","Costa","Istmo", "Mixteca" ,"Papaloapan" ,"Sierra Norte","Sierra Sur","Valles Centrales"]), :class =>"form-control" %>
+  </div><br><br>
+  <div class="field">
+    <%= f.label "Tipo de taller" %><br>
+     <%= f.select :t_taller, options_for_select([["Selecciona Uno", ""], "Colectivo","Familiar","Individual"]), :class => 'genForm_dropBox' %>
+  </div><br><br>
+  <div class="field">
+    <%= f.label "Tipo de artesanías" %><br>
+    <%= f.select :t_artesania, options_for_select([["Selecciona Uno", ""], 
+
+"Alfarería y cerámica",
+"Cartonería y papel",
+"Cerería",
+"Concha y caracol",
+"Fibras vegetales",
+"Hueso y cuerno",
+"Joyería y orfebrería",
+"Lapidaría y cantería",
+"Madera",
+"Maque y laca",
+"Metalistería",
+"Plumería",
+"Talabartería y peletería",
+"Textil",
+"Vidrio"
+
+
+    ]), :class =>"form-control" %>
+  </div><br><br>
+  <div class="field">
+    <%= f.label "Descripción general" %><br>
+    <%= f.text_area :desc, :class =>"form-control" %>
+  </div><br><br>
+  <div class="field">
+    <%= f.label "Logotipo" %><br>
+    <%= f.file_field :logo %>
+  </div><br><br>
+  <div class="field">
+    <%= f.label "Fotografía de artesano" %><br>
+    <%= f.file_field :foto %>
+  </div><br><br>
+  <div class="field">
+    <%= f.label "Banner 1" %><br>
+    <%= f.file_field :banner1 %>
+  </div><br><br>
+  <div class="field">
+    <%= f.label "Banner 2" %><br>
+    <%= f.file_field :banner2 %>
+  </div><br><br>
+  <div class="field">
+    <%= f.label "Banner 3" %><br>
+    <%= f.file_field :banner3 %>
+  </div><br><br>
+  <div class="field">
+    <%= f.label "Banner 4" %><br>
+    <%= f.file_field :banner4 %>
+  </div><br><br>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
